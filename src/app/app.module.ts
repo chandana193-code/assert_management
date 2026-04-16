@@ -7,16 +7,27 @@ import { LoginComponent } from './login/login.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { UserDashboradComponent } from './users/user-dashborad/user-dashborad.component';
+import { MyAssetComponent } from './users/my-asset/my-asset.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AdminDashboardComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent, 
+    MyAssetComponent,
+    UserDashboradComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule   
   ],
   providers: [],
   bootstrap: [AppComponent]

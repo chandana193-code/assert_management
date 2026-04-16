@@ -1,6 +1,7 @@
 {
-    "user":{
-        "name": "John Doe",
-        "email": "john@gamil.com"
-    }
+    "user":[{
+        "id": "1",
+        "email": "john@gamil.com",
+        "password": "1234aki"
+    }]
 }
