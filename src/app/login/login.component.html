@@ -1,5 +1,6 @@
-<h2>Login Page</h2>
+
 <div class="login-container">
+  <h2>Login</h2>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="email">Email:</label>
@@ -11,3 +12,4 @@
     </div>
     <button type="submit" [disabled]="!loginForm.valid">Login</button>
   </form>
+</div>
