@@ -1,21 +1,21 @@
-
 <div class="A">
-    <form [formGroup]="registration" >
- <div class="b">
-         <div class="c">
-        <label for="name" >First Name:</label>
-        <input type="text" id="name" placeholder="*Enter FirstName" formControlName="first">
-            <div class="field-error" *ngIf="registration.get('first')?.touched && registration.get('first')?.invalid">
-                 First name is Required
-             </div>
-        </div>
-         <div class="d">
-        <label for="last">Last Name:</label>
-        <input type="text" id="last" placeholder="*Enter LastName" formControlName="last">
-        <div class="field-error" *ngIf="registration.get('last')?.touched && registration.get('last')?.invalid">
-            Last name is Required</div>
+    <form [formGroup]="registration">
+        <div class="b">
+            <div class="c">
+                <label for="name">First Name:</label>
+                <input type="text" id="name" placeholder="*Enter FirstName" formControlName="first">
+                <div class="field-error"
+                    *ngIf="registration.get('first')?.touched && registration.get('first')?.invalid">
+                    First name is Required
+                </div>
             </div>
- </div>
+            <div class="d">
+                <label for="last">Last Name:</label>
+                <input type="text" id="last" placeholder="*Enter LastName" formControlName="last">
+                <div class="field-error" *ngIf="registration.get('last')?.touched && registration.get('last')?.invalid">
+                    Last name is Required</div>
+            </div>
+        </div>
         <label for="mail">Mail:</label>
         <input type="email" id="mail" placeholder="*Enter Mail" formControlName="email">
         <div class="field-error" *ngIf="registration.get('email')?.touched && registration.get('email')?.invalid">
@@ -32,22 +32,22 @@
             Phoneno is Required</div>
 
         <button (click)="submit()">Submit</button>
-         <div class="success-message" *ngIf="showSuccess">
-        
+        <div class="success-message" *ngIf="showSuccess">
+
+        </div>
+
+    </form>
+</div>
+
+
+<div class="popup-overlay" *ngIf="showSuccess">
+    <div class="popup-box">
+        <div class="success-icon">
+            <div class="circle"></div>
+            <div class="tick"></div>
+        </div>
+        <h3>Registration Successfull</h3>
+
+
     </div>
-
-    </form> 
- </div>
-
- 
- <div class="popup-overlay" *ngIf="showSuccess">
-  <div class="popup-box">
-    <div class="success-icon">
-      <div class="circle"></div>
-      <div class="tick"></div>
-    </div>
-    <h3>Registration Successfull</h3>
-  
-
-  </div>
 </div>

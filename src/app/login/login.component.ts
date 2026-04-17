@@ -10,28 +10,53 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  showSuccess: boolean = false;
+  showError: boolean = false;
   constructor(
-  private loginService: LoginServiceService,
-  private router: Router,
-  private fb : FormBuilder
-) {}
+    private loginService: LoginServiceService,
+    private router: Router,
+    private fb: FormBuilder
+  ) { }
 
   loginForm = this.fb.group({
-    email: ['',Validators.required],
-    password: ['',Validators.required]
+    email: ['', Validators.required],
+    password: ['', Validators.required]
   });
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.loginForm.value);
+    const enteredEmail = this.loginForm.value.email;
+    const enteredPassword = this.loginForm.value.password;
+    const user = this.loginData.find(
+      (u) => u.email === enteredEmail && u.password === enteredPassword
+    );
+    if (user) {
+      this.showSuccess = true;
+      setTimeout(() => {
+        this.showSuccess = false;
+        this.router.navigate(['/user-dashboard']);
+      }, 1500);
+
+
+    } else {
+      this.showError = true;
+
+      setTimeout(() => {
+        this.showError = false;
+      }, 1500);
+      // alert('Invalid Email or Password ❌');
+    }
+
     this.loginForm.reset();
-    this.router.navigate(['/user-dashboard']);
+    //this.router.navigate(['/user-dashboard']);
   }
-  loginData : User | null = null;
+  loginData: User[] = [];
 
   ngOnInit(): void {
-  this.loginService.getlogin().subscribe((response)=>{
-    console.log(response);
-    this.loginData = response;
+    this.loginService.getlogin().subscribe((response) => {
+      console.log(response);
+      this.loginData = response;
+    }
+    );
   }
-  );}
 }

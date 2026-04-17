@@ -4,18 +4,42 @@
       "first": "karthik",
       "last": "karthik",
       "email": "fghj",
-      "pass": "89999852",
+      "password": "89999852",
       "phno": 8498991550,
-      "id": 1
+      "id": "1"
     },
-    
     {
       "first": "karthik",
       "last": "karthik",
       "email": "mamidi@gmail",
       "password": "876553",
       "phno": 5962532,
-      "id": 23
+      "id": "23"
+    },
+    {
+      "first": "A",
+      "last": "Akilesh",
+      "email": "eakilesh0@gmail.com",
+      "password": "Akilesh@007",
+      "phno": 8656756872,
+      "id": "SB1qNR1L75Q"
+    },
+    {
+      "first": "",
+      "last": "",
+      "email": "",
+      "password": "",
+      "phno": "",
+      "id": "yiSLiezr-hQ"
+    },
+    {
+      "first": "dhina",
+      "last": "K",
+      "email": "dhina@gmai.com",
+      "password": "dhina123",
+      "phno": 232323352454,
+      "id": "T_c-iqkM-Rs"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
