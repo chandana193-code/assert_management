@@ -41,7 +41,8 @@ form::before {
   gap: 30px;
 }
 
-.c, .d {
+.c,
+.d {
   flex: 1;
 }
 
@@ -52,6 +53,7 @@ label {
   display: block;
   margin-top: 10px;
 }
+
 /* Make labels aligned with icon */
 label {
   display: flex;
@@ -96,6 +98,7 @@ label[for="pass"]::before {
 label[for="ph"]::before {
   background-image: url('https://cdn-icons-png.flaticon.com/128/10473/10473346.png');
 }
+
 /* Inputs */
 
 input {
@@ -112,8 +115,9 @@ input {
 /* Focus effect */
 input:focus {
   border-color: #2d7be5;
-  box-shadow: 0 0 5px rgba(45,123,229,0.3);
+  box-shadow: 0 0 5px rgba(45, 123, 229, 0.3);
 }
+
 .field-error {
   color: red;
   font-size: 12px;
@@ -125,7 +129,7 @@ button {
   width: 50%;
   padding: 10px;
   margin-top: 30px;
-  margin-left:87px;
+  margin-left: 87px;
   background: #2d7be5;
   color: white;
   border: none;
@@ -133,6 +137,7 @@ button {
   font-size: 15px;
   cursor: pointer;
 }
+
 /* Overlay background */
 .popup-overlay {
   position: fixed;
@@ -140,7 +145,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 
   display: flex;
   justify-content: center;
@@ -212,6 +217,7 @@ button {
     transform: rotate(0deg);
     border-top-color: transparent;
   }
+
   100% {
     transform: rotate(360deg);
     border-top-color: #28a745;
@@ -223,6 +229,7 @@ button {
     transform: rotate(45deg) scale(0);
     opacity: 0;
   }
+
   100% {
     transform: rotate(45deg) scale(1);
     opacity: 1;
@@ -234,6 +241,7 @@ button {
     transform: scale(0.7);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -241,8 +249,13 @@ button {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Button hover */
