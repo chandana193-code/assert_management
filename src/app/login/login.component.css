@@ -280,3 +280,8 @@ button:disabled {
   100% { transform: translateX(0); }
 }
 
+.field-errors {
+  color: red;
+  font-size: 12px;
+  margin-top: 3px;
+}
