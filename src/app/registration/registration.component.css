@@ -16,11 +16,13 @@ body {
 /* Form card */
 form {
   width: 350px;
-  height: 390px;
+  min-height:400px;
   background: #fff;
   padding: 50px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  box-shadow: 0 5px 19px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -252,4 +254,10 @@ button:hover {
 input[type="checkbox"] {
   width: auto;
   margin-right: 5px;
+}
+.z{
+  font-size: 15px;
+  padding: 15px;
+  padding-top: 25px;
+  text-align: center;
 }
