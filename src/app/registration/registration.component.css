@@ -1,0 +1,139 @@
+/* Page background */
+body {
+  background: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+/* Center container */
+.A {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Form card */
+form {
+  width: 350px;
+  height: 390px;
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+form::before {
+  content: "Registration Form";
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* First & Last name side by side */
+.b {
+  display: flex;
+  gap: 30px;
+}
+
+.c, .d {
+  flex: 1;
+}
+
+/* Labels */
+label {
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+}
+/* Make labels aligned with icon */
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Common icon style */
+label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* First Name icon */
+label[for="name"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/16442/16442630.png');
+}
+
+/* Last Name icon */
+label[for="last"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/15869/15869715.png');
+}
+
+/* Email icon */
+label[for="mail"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/2965/2965306.png');
+}
+
+/* Password icon */
+label[for="pass"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/11135/11135307.png');
+}
+
+/* Phone icon */
+label[for="ph"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/10473/10473346.png');
+}
+/* Inputs */
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+
+/* Focus effect */
+input:focus {
+  border-color: #2d7be5;
+  box-shadow: 0 0 5px rgba(45,123,229,0.3);
+}
+
+/* Button */
+button {
+  width: 50%;
+  padding: 10px;
+  margin-top: 30px;
+  margin-left:87px;
+  background: #2d7be5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Button hover */
+button:hover {
+  background: #1a5fd0;
+}
+
+/* Extra spacing like design */
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
