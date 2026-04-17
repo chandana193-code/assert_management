@@ -9,14 +9,14 @@ import { RegiServService } from '../regi-serv.service';
 })
 export class RegistrationComponent {
  
-
+showSuccess:boolean=false;
   store:any=[];
   
   values={
     first:'',
     last:'',
     email:'',
-    pass:'',
+    password:'',
     phno:''
   }
 
@@ -26,19 +26,30 @@ export class RegistrationComponent {
       first:['',[Validators.required]],
       last:['',[Validators.required]],
       email:['',[Validators.required]],
-      pass:['',[Validators.required]],
+      password:['',[Validators.required]],
       phno:['',[Validators.required]]
     });
   
   
   submit() {
+    if(this.registration.invalid){
+        this.registration.markAllAsTouched(); // show errors in UI
+    return; 
+        
+    }
+
   const formData = this.registration.value;
 
   this.b.post(formData).subscribe(() => {
-    alert("Data added successfully");
     this.getdata(); // refresh list
     this.registration.reset(); // clear form
   });
+
+ this.showSuccess=true;
+ 
+      setTimeout(()=>{
+      this.showSuccess=false;
+    }, 1500);
 }
 
 ngOnInit(){

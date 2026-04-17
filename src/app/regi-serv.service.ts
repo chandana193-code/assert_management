@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class RegiServService {
 
-  api='http://localhost:4000/user';
+  api='http://localhost:3000/user';
   constructor(private db:HttpClient) { }
 
 post(data:any){
