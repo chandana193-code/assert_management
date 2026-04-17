@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginServiceService, User } from '../services/login-service.service';
 import { Router } from '@angular/router';
 
@@ -10,16 +10,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  // constructor(private loginService : LoginServiceService, private router: Router) { }
-  
   constructor(
   private loginService: LoginServiceService,
-  private router: Router
+  private router: Router,
+  private fb : FormBuilder
 ) {}
 
-  loginForm = new FormGroup({
-    email: new FormControl('',Validators.required),
-    password: new FormControl('',Validators.required)
+  loginForm = this.fb.group({
+    email: ['',Validators.required],
+    password: ['',Validators.required]
   });
 
   onSubmit(){
