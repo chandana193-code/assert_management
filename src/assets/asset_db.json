@@ -7,6 +7,15 @@
       "pass": "89999852",
       "phno": 8498991550,
       "id": 1
+    },
+    
+    {
+      "first": "karthik",
+      "last": "karthik",
+      "email": "mamidi@gmail",
+      "password": "876553",
+      "phno": 5962532,
+      "id": 23
     }
   ]
 }
