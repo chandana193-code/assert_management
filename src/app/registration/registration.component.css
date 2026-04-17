@@ -112,6 +112,11 @@ input:focus {
   border-color: #2d7be5;
   box-shadow: 0 0 5px rgba(45,123,229,0.3);
 }
+.field-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 3px;
+}
 
 /* Button */
 button {
@@ -125,6 +130,117 @@ button {
   border-radius: 8px;
   font-size: 15px;
   cursor: pointer;
+}
+/* Overlay background */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeIn 0.3s ease;
+  z-index: 999;
+}
+
+/* Popup box */
+.popup-box {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+
+  animation: scaleUp 0.4s ease;
+}
+
+/* Icon container */
+.success-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+}
+
+/* Rotating circle */
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #28a745;
+  border-radius: 50%;
+  border-top-color: transparent;
+
+  animation: rotateCircle 1s linear;
+}
+
+/* Tick mark */
+.tick {
+  position: absolute;
+  top: 22px;
+  left: 30px;
+  width: 20px;
+  height: 40px;
+  border: solid #28a745;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg) scale(0);
+
+  animation: drawTick 0.5s ease forwards;
+  animation-delay: 0.8s;
+}
+
+/* Text */
+.popup-box h3 {
+  margin: 10px 0 5px;
+  color: #28a745;
+}
+
+.popup-box p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Animations */
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: transparent;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: #28a745;
+  }
+}
+
+@keyframes drawTick {
+  0% {
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* Button hover */
