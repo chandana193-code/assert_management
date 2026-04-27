@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.showSuccess = true;
       setTimeout(() => {
         this.showSuccess = false;
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/UserLayout']);
       }, 1500);
 
 
