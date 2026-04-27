@@ -10,14 +10,14 @@ import { ProfileComponent } from './users/profile/profile.component';
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch:'full'},
   { path: 'register', component: RegistrationComponent },
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
 
   {
-    path: '',
+    path: 'UserLayout',
     component: UserLayoutComponent,
     children: [
       { path: 'MyAsset', component: MyAssetComponent },
-      { path: 'user-dashboard', component: UserDashboradComponent },
+      { path: 'dashboard', component: UserDashboradComponent },
       { path: 'profile', component: ProfileComponent},
       { path: '', redirectTo: 'MyAsset', pathMatch: 'full' }
     ]

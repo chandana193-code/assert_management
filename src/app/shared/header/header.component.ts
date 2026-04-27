@@ -18,11 +18,11 @@ export class HeaderComponent {
 
   goToProfile() {
     this.showDropdown = false;
-    this.router.navigate(['/profile']);
+    this.router.navigate(['/UserLayout/profile']);
   }
 
   logout() {
     this.showDropdown = false;
-    this.router.navigate(['/login']);
+    this.router.navigate(['']);
   }
 }
