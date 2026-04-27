@@ -6,11 +6,17 @@ import { UserDashboradComponent } from './users/user-dashborad/user-dashborad.co
 import { MyAssetComponent } from './users/my-asset/my-asset.component';
 
 const routes: Routes = [
-  {path:'register',component:RegistrationComponent},
-  {path: '', component: LoginComponent},
-  { path: 'user-dashboard', component: UserDashboradComponent },
-  {path: 'MyAsset', component: MyAssetComponent},
-  {path: '', redirectTo: 'login', pathMatch: 'full'}
+  { path: 'register', component: RegistrationComponent },
+  { path: '', component: LoginComponent },
+
+  {
+    path: 'dashboard',
+    component: UserDashboradComponent,
+    children: [
+      { path: 'MyAsset', component: MyAssetComponent },
+      { path: 'dashboard', redirectTo: 'dashboard', pathMatch: 'full' }
+    ]
+  }
 ];
 
 @NgModule({
