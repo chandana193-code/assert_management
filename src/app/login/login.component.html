@@ -1,0 +1,41 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" name="email" placeholder="Enter your email">
+      <div class="field-errors" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+        Email is Required!
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" name="password" placeholder="Enter your password">
+      <div class="field-errors" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+        Password is Required!
+      </div>
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+  </form>
+  <div class="signup">Don't have an account?<a [routerLink]="['/register']"> Register here</a></div>
+
+  <div class="popup-overlay" *ngIf="showSuccess">
+    <div class="popup-box">
+      <div class="success-icon">
+        <div class="circle"></div>
+        <div class="tick"></div>
+      </div>
+      <h3>Login Successfull</h3>
+    </div>
+  </div>
+
+  <div class="popup-overlay" *ngIf="showError">
+    <div class="popup-box error">
+      <div class="error-icon">
+        <div class="circle"></div>
+        <div class="cross"></div>
+      </div>
+      <h3>Invalid Email or Password</h3>
+    </div>
+  </div>
+</div>

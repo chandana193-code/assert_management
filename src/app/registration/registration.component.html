@@ -1,0 +1,54 @@
+<div class="A">
+    <form [formGroup]="registration">
+        <div class="b">
+            <div class="c">
+                <label for="name">First Name:</label>
+                <input type="text" id="name" placeholder="*Enter FirstName" formControlName="first">
+                <div class="field-error"
+                    *ngIf="registration.get('first')?.touched && registration.get('first')?.invalid">
+                    First name is Required
+                </div>
+            </div>
+            <div class="d">
+                <label for="last">Last Name:</label>
+                <input type="text" id="last" placeholder="*Enter LastName" formControlName="last">
+                <div class="field-error" *ngIf="registration.get('last')?.touched && registration.get('last')?.invalid">
+                    Last name is Required</div>
+            </div>
+        </div>
+        <label for="mail">Mail:</label>
+        <input type="email" id="mail" placeholder="*Enter Mail" formControlName="email">
+        <div class="field-error" *ngIf="registration.get('email')?.touched && registration.get('email')?.invalid">
+            email is Required</div>
+
+        <label for="pass">Password</label>
+        <input type="password" id="pass" placeholder="*Enter Password" formControlName="password">
+        <div class="field-error" *ngIf="registration.get('password')?.touched && registration.get('password')?.invalid">
+            Password is Required</div>
+
+        <label for="ph">PhoneNo:</label>
+        <input type="number" id="ph" placeholder="*Enter PhoneNo" formControlName="phno">
+        <div class="field-error" *ngIf="registration.get('phno')?.touched && registration.get('phno')?.invalid">
+            Phoneno is Required</div>
+
+        <button (click)="submit()">Submit</button>
+         <div class="success-message" *ngIf="showSuccess">
+
+      
+    </div>
+    <div class="z">Already You Have An Account :<a routerLink="">Login Here</a></div>
+    </form> 
+ </div>
+
+ 
+ <div class="popup-overlay" *ngIf="showSuccess">
+  <div class="popup-box">
+    <div class="success-icon">
+      <div class="circle"></div>
+      <div class="tick"></div>
+    </div>
+    <h3>Registration Successfull</h3>
+  
+
+  </div>
+</div>
