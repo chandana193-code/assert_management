@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   loginForm = this.fb.group({
     email: ['', Validators.required],
-    password: ['', Validators.required]
+    password: ['', [Validators.required]]
   });
 
   onSubmit() {
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.showSuccess = true;
       setTimeout(() => {
         this.showSuccess = false;
-        this.router.navigate(['/user-dashboard']);
+        this.router.navigate(['/dashboard']);
       }, 1500);
 
 

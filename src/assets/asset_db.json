@@ -39,7 +39,24 @@
       "password": "dhina123",
       "phno": 232323352454,
       "id": "T_c-iqkM-Rs"
+    },
+    {
+      "first": "Hari",
+      "last": "narayana",
+      "email": "hari@gmail.com",
+      "password": "hari123",
+      "phno": 739878973,
+      "id": "mD39xxteDHA"
+    },
+    {
+      "first": "sai",
+      "last": "kumar",
+      "email": "sai@gmail.com",
+      "password": "sai123",
+      "phno": 9876543210,
+      "id": "sai123"
     }
+
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
