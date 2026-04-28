@@ -1,0 +1,70 @@
+<div class="page">
+
+  <div class="top">
+    <span class="badge">Add Asset</span>
+    <button type="button" class="back-btn" (click)="cancel()">← Back</button>
+  </div>
+
+  <h1>Create a new asset</h1>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="card">
+
+    <div class="grid">
+
+      <div>
+        <label>Asset name</label>
+        <input type="text" formControlName="name">
+      </div>
+
+      <div>
+        <label>Category</label>
+        <input type="text" formControlName="category">
+      </div>
+
+      <div>
+        <label>Serial number</label>
+        <input type="text" formControlName="serialNumber">
+      </div>
+
+      <div>
+        <label>Purchase date</label>
+        <input type="date" formControlName="purchaseDate">
+      </div>
+
+      <div>
+        <label>Status</label>
+        <select formControlName="status">
+          <option value="Available">Available</option>
+          <option value="Assigned">Assigned</option>
+          <option value="Repair">Repair</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Condition</label>
+        <select formControlName="condition">
+          <option value="Good">Good</option>
+          <option value="Average">Average</option>
+          <option value="Damaged">Damaged</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Assigned user</label>
+        <select formControlName="assignedUser">
+          <option value="Unassigned">Unassigned</option>
+          <option value="User 1">User 1</option>
+          <option value="User 2">User 2</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="actions">
+      <button type="button" (click)="cancel()">Cancel</button>
+      <button type="submit">Save Asset</button>
+    </div>
+
+  </form>
+
+</div>

@@ -56,7 +56,9 @@
       "phno": 9876543210,
       "id": "sai123"
     }
-
+  ],
+  "asset": [
+   
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
