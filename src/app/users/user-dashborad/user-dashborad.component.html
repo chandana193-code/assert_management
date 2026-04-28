@@ -1,12 +1,18 @@
 <div class="main container">
 
 <div class="sidebar">
-  <h2>Dashboard</h2>
+  <aside class="sidebar">
+  <h2 class="logo">📦 User Panel</h2>
 
-  <ul>
-    <li [routerLink]="['/UserLayout/MyAsset']">My Assets</li>
-    <li routerLink="/UserLayout/RequestAsset">Request Asset</li>
-    <li routerLink ="/UserLayout/MyRequests">My Requests</li>
+  <ul class="menu">
+    <li class="active" [routerLink]="['/UserLayout/MyAsset']">🏠Dashboard</li>
+    <li [routerLink]="['/UserLayout/RequestAsset']">💻 Asset Request</li>
+    <li [routerLink]="['/UserLayout/MyRequests']">➕ My Request</li>
+    <!-- <li>👥 Use</li>
+    <li>📨 Requests</li>
+    <li>🔗 Assign Asset</li>
+    <li>🕓 History</li> -->
   </ul>
+</aside>
 </div>
 </div>
