@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="right-section">
+    
+    <div class="profile-container">
+      
+      <!-- Profile Icon -->
+      <img 
+        class="profile-img"
+        src="assets/userLogo.svg"
+        alt="user"
+        (click)="toggleDropdown()"
+      />
+
+      <!-- Dropdown -->
+      <div *ngIf="showDropdown" class="dropdown">
+        <div class="dropdown-item" (click)="goToProfile()">Profile</div>
+        <div class="dropdown-item logout" (click)="logout()">Logout</div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
