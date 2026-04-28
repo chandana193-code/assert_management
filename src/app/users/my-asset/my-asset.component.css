@@ -1,4 +1,150 @@
-#assert{
-    display: flex;
-    justify-content: center;
+.dashboard-page {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.page-header {
+  background: white;
+  border: 1px solid #d8e0ec;
+  border-radius: 12px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-header p {
+  margin: 0;
+  color: #5d6b82;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.page-header h1 {
+  margin: 5px 0 0;
+  font-size: 28px;
+}
+
+.refresh-btn {
+  border: 1px solid #0b66ff;
+  background: white;
+  color: #0b66ff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* BADGE */
+.badge {
+  background: #cfe1ff;
+  color: #075fee;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.main-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #e0e6ef;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card p {
+  margin: 10px 0;
+  color: #6b778c;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* ICONS */
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue { background: #dff3ff; color: #0474bd; }
+.purple { background: #eef3ff; color: #0b66ff; }
+.yellow { background: #fff0b8; color: #9b6b00; }
+.green { background: #d8ffe5; color: #038c35; }
+.red { background: #ffe1df; color: #e33125; }
+
+/* ACTION BOX */
+.action-box {
+  margin-top: 25px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e6ef;
+}
+
+.action-box h2 {
+  margin: 0 0 10px;
+}
+
+.action-box p {
+  color: #6b778c;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.action-grid button {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e6ef;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.action-grid button:hover {
+  border-color: #0b66ff;
+  color: #0b66ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .action-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

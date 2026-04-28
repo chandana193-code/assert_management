@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-asset.component.css']
 })
 export class MyAssetComponent {
+  assignedAssets = 0;
+  totalRequests = 0;
+  pending = 0;
+  approved = 0;
+  rejected = 0;
 
+  
 }
