@@ -17,6 +17,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { UserLayoutComponent } from './users/user-layout/user-layout.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { AddAssetComponent } from './add-asset/add-asset.component';
+import { MyRequestsComponent } from './users/my-requests/my-requests.component';
+import { RequestAssetComponent } from './users/request-asset/request-asset.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { AddAssetComponent } from './add-asset/add-asset.component';
     UserLayoutComponent,
     UserDashboradComponent,
     ProfileComponent,
-    AddAssetComponent
+    AddAssetComponent,
+    MyRequestsComponent,
+    RequestAssetComponent
   ],
   imports: [
     BrowserModule,
