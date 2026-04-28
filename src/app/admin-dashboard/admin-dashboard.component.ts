@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
+import { DashboardService } from '../dashboard.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -8,3 +10,4 @@ import { Component } from '@angular/core';
 export class AdminDashboardComponent {
 
 }
+
