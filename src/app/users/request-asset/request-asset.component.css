@@ -1,0 +1,103 @@
+/* PAGE */
+.page {
+  background: #fff;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* CONTENT */
+.content {
+  padding: 20px;
+}
+
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BADGE */
+.badge {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* REFRESH */
+.refresh-btn {
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+/* TITLE */
+.title {
+  margin: 15px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* SEARCH */
+.search-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.search-card input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* ASSET CARD */
+.asset-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* STATUS */
+.status {
+  background: #15803d;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* SUBTEXT */
+.sub {
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+/* ROW */
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+/* BUTTON */
+.request-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
