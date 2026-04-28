@@ -10,6 +10,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 
 import { UserLayoutComponent } from './users/user-layout/user-layout.component';
 import { ProfileComponent } from './users/profile/profile.component';
+import { MyRequestsComponent } from './users/my-requests/my-requests.component';
+import { RequestAssetComponent } from './users/request-asset/request-asset.component';
 
 const routes: Routes = [
   {path:'register',component:RegistrationComponent},
@@ -20,7 +22,23 @@ const routes: Routes = [
     {path:'dashboard', component: UserDashboradComponent},
     {path:'profile', component: ProfileComponent},
     {path: '', redirectTo: 'MyAsset', pathMatch:'full'}
-  ]}
+  ]},
+  {path: '', redirectTo: 'login', pathMatch:'full'},
+  { path: 'register', component: RegistrationComponent },
+  { path: '', component: LoginComponent },
+
+  {
+    path: 'UserLayout',
+    component: UserLayoutComponent,
+    children: [
+      { path: 'MyAsset', component: MyAssetComponent },
+      { path: 'dashboard', component: UserDashboradComponent },
+      { path: 'profile', component: ProfileComponent},
+      { path: 'MyRequests', component:MyRequestsComponent},
+      { path: 'RequestAsset', component: RequestAssetComponent },
+      { path: '', redirectTo: 'MyAsset', pathMatch: 'full' }
+    ]
+  }
 ];
 
 @NgModule({

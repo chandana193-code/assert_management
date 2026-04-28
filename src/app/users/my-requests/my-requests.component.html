@@ -1,0 +1,48 @@
+<div class="wrapper">
+<div class="myRequest">
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span class="badge">My Requests</span>
+
+    <button class="refresh-btn">
+      ⟳ Refresh
+    </button>
+  </div>
+
+  <!-- TITLE -->
+  <h1 class="title">Request status tracking</h1>
+
+  <!-- CARD -->
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>ASSET</th>
+          <th>CATEGORY</th>
+          <th>SERIAL</th>
+          <th>REQUEST DATE</th>
+          <th>STATUS</th>
+          <th>ADMIN REMARK</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let r of requests">
+          <td class="link">{{ r.asset }}</td>
+          <td>{{ r.category }}</td>
+          <td>{{ r.serial }}</td>
+          <td>{{ r.date }}</td>
+
+          <td>
+            <span class="status approved">{{ r.status }}</span>
+          </td>
+
+          <td>{{ r.remark }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
