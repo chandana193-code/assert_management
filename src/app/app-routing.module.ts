@@ -17,15 +17,15 @@ const routes: Routes = [
   {path:'register',component:RegistrationComponent},
   {path: '', component: LoginComponent},
   
-  {path:'UserLayout', component: UserLayoutComponent, children: [
-    {path:'MyAsset', component: MyAssetComponent},
-    {path:'dashboard', component: UserDashboradComponent},
-    {path:'profile', component: ProfileComponent},
-    {path: '', redirectTo: 'MyAsset', pathMatch:'full'}
-  ]},
-  {path: '', redirectTo: 'login', pathMatch:'full'},
-  { path: 'register', component: RegistrationComponent },
-  { path: '', component: LoginComponent },
+  // {path:'UserLayout', component: UserLayoutComponent, children: [
+  //   {path:'MyAsset', component: MyAssetComponent},
+  //   {path:'dashboard', component: UserDashboradComponent},
+  //   {path:'profile', component: ProfileComponent},
+  //   {path: '', redirectTo: 'MyAsset', pathMatch:'full'}
+  // ]},
+  // {path: '', redirectTo: 'login', pathMatch:'full'},
+  // { path: 'register', component: RegistrationComponent },
+  // { path: '', component: LoginComponent },
 
   {
     path: 'UserLayout',

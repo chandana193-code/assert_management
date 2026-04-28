@@ -1,1 +1,46 @@
-<p id="assert">my-asset works!</p>
+<div class="dashboard-page">
+ <div class="page-header">
+    <div>
+      <p>User PANEL</p>
+      <h1>Dashboard</h1>
+    </div>
+
+    <button class="refresh-btn">↻ Refresh</button>
+  </div>
+
+  <span class="badge">User Dashboard</span>
+
+  <h2 class="main-title">Asset management summary</h2>
+
+<div class="summary-cards">
+  <div class="card">
+    <div class="icon blue">▣</div>
+    <p>Assigned assets</p>
+    <h3>{{ assignedAssets }}</h3>
+  </div>
+
+  <div class="card">
+    <div class="icon purple">☰</div>
+    <p>Total requests</p>
+    <h3>{{ totalRequests }}</h3>
+  </div>
+
+  <div class="card">
+    <div class="icon yellow">⌛</div>
+    <p>Pending</p>
+    <h3>{{ pending }}</h3>
+  </div>
+
+  <div class="card">
+    <div class="icon green">✓</div>
+    <p>Approved</p>
+    <h3>{{ approved }}</h3>
+  </div>
+
+  <div class="card">
+    <div class="icon red">×</div>
+    <p>Rejected</p>
+    <h3>{{ rejected }}</h3>
+  </div>
+</div>
+</div>
