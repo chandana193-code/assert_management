@@ -21,17 +21,25 @@
         <div class="field-error" *ngIf="registration.get('email')?.touched && registration.get('email')?.invalid">
             email is Required</div>
 
-        <label for="pass">Password</label>
+        <label for="pass">Password:</label>
         <input type="password" id="pass" placeholder="*Enter Password" formControlName="password">
         <div class="field-error" *ngIf="registration.get('password')?.touched && registration.get('password')?.invalid">
             Password is Required</div>
 
         <label for="ph">PhoneNo:</label>
-        <input type="number" id="ph" placeholder="*Enter PhoneNo" formControlName="phno">
+        <input type="text" id="ph" placeholder="*Enter PhoneNo" formControlName="phno">
         <div class="field-error" *ngIf="registration.get('phno')?.touched && registration.get('phno')?.invalid">
             Phoneno is Required</div>
 
-        <button (click)="submit()">Submit</button>
+            
+        <label for="role">Role:</label>
+        <input type="text" id="role" placeholder="*Enter User details" formControlName="role">
+        <div class="field-error" *ngIf="registration.get('role')?.touched && registration.get('role')?.invalid">
+            Users is Required</div>
+
+        <button (click)="submit()">Register
+            
+        </button>
          <div class="success-message" *ngIf="showSuccess">
 
       
@@ -48,7 +56,5 @@
       <div class="tick"></div>
     </div>
     <h3>Registration Successfull</h3>
-  
-
   </div>
 </div>

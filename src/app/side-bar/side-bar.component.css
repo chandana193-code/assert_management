@@ -1,0 +1,57 @@
+/* Sidebar Container */
+.sidebar {
+  width: 280px;
+  background: #0f172a; /* Darker, more modern slate */
+  color: #f8fafc;
+  padding: 32px 20px;
+  height: 90.8vh;     
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  position: sticky;
+  top: 0;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  padding-left: 12px;
+  letter-spacing: -0.5px;
+}
+
+/* Menu List */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  margin-bottom: 4px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #94a3b8; /* Muted text for non-active items */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover & Active States */
+.menu li:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transform: translateX(4px); /* Subtle slide effect */
+}
+
+.menu li.active {
+  background: #3b82f6; /* Modern Vibrant Blue */
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
