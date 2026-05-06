@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { LoginComponent } from './login/login.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
-import { HttpClientModule } from '@angular/common/http';
 import { UserDashboradComponent } from './users/user-dashborad/user-dashborad.component';
 import { MyAssetComponent } from './users/my-asset/my-asset.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { UserLayoutComponent } from './users/user-layout/user-layout.component';
@@ -19,6 +20,18 @@ import { ProfileComponent } from './users/profile/profile.component';
 import { AddAssetComponent } from './add-asset/add-asset.component';
 import { MyRequestsComponent } from './users/my-requests/my-requests.component';
 import { RequestAssetComponent } from './users/request-asset/request-asset.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Angular Material
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DashBoardComponent } from './dash-board/dash-board.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +46,16 @@ import { RequestAssetComponent } from './users/request-asset/request-asset.compo
     ProfileComponent,
     AddAssetComponent,
     MyRequestsComponent,
-    RequestAssetComponent
+    RequestAssetComponent,
+    AdminDashboardComponent,
+    RegistrationComponent,
+    UserDashboradComponent,
+    MyAssetComponent,
+     AppComponent,
+     DashBoardComponent,
+     SideBarComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,8 +63,15 @@ import { RequestAssetComponent } from './users/request-asset/request-asset.compo
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatTableModule,
+    MatSnackBarModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

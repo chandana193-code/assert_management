@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
@@ -12,21 +12,13 @@ import { UserLayoutComponent } from './users/user-layout/user-layout.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { MyRequestsComponent } from './users/my-requests/my-requests.component';
 import { RequestAssetComponent } from './users/request-asset/request-asset.component';
+import { DashBoardComponent } from './dash-board/dash-board.component';
+import { AddAssetComponent } from './add-asset/add-asset.component';
 
 const routes: Routes = [
   {path:'register',component:RegistrationComponent},
   {path: '', component: LoginComponent},
   
-  // {path:'UserLayout', component: UserLayoutComponent, children: [
-  //   {path:'MyAsset', component: MyAssetComponent},
-  //   {path:'dashboard', component: UserDashboradComponent},
-  //   {path:'profile', component: ProfileComponent},
-  //   {path: '', redirectTo: 'MyAsset', pathMatch:'full'}
-  // ]},
-  // {path: '', redirectTo: 'login', pathMatch:'full'},
-  // { path: 'register', component: RegistrationComponent },
-  // { path: '', component: LoginComponent },
-
   {
     path: 'UserLayout',
     component: UserLayoutComponent,
@@ -38,7 +30,14 @@ const routes: Routes = [
       { path: 'RequestAsset', component: RequestAssetComponent },
       { path: '', redirectTo: 'MyAsset', pathMatch: 'full' }
     ]
+  },
+  {path:'admindashboard',component:DashBoardComponent,
+    children:[
+      {path:'add-Asset',component:AddAssetComponent}
+    ]
   }
+
+
 ];
 
 @NgModule({
