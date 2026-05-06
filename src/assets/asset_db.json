@@ -1,6 +1,5 @@
 {
-  "user": 
-  [
+  "user": [
     {
       "first": "karthik",
       "last": "karthik",
@@ -56,7 +55,35 @@
       "password": "sai123",
       "phno": 9876543210,
       "id": "sai123"
+    },
+    {
+      "first": "user",
+      "last": "gg",
+      "email": "user@gmail.com",
+      "password": "user123",
+      "phno": "85863252",
+      "role": "user",
+      "id": "7CFkxqc"
+    },
+    {
+      "first": "gh",
+      "last": "fghj",
+      "email": "mamidi@gmail",
+      "password": "876553",
+      "phno": "dg",
+      "role": "ghjk",
+      "id": "H76_thN"
+    },
+    {
+      "first": "ertyj",
+      "last": "karthik",
+      "email": "mamidi@gmail",
+      "password": "wertyh",
+      "phno": "08498991550",
+      "role": "aserthasdfer",
+      "id": "32fMBur"
     }
   ],
+  "asset": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

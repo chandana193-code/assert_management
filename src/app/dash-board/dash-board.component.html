@@ -1,0 +1,115 @@
+<div class="container">
+<!-- sidebar component -->
+<app-side-bar></app-side-bar>
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Header -->
+    <header class="header">
+      <div>
+        <!-- <h4 class="sub-title">ADMIN PANEL</h4> -->
+        <h1 class="main-title">Asset Management</h1>
+       
+      </div>
+
+      <div class="right-header">
+        
+        <div class="user-info">
+          <div>
+            <strong>Karthik Admin</strong><br>
+            <small>TVK Technologies</small>
+          </div>
+<button class="logout-btn">
+  <svg class="logout-icon" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="2"
+      d="M16 17l5-5-5-5M21 12H9M13 5V3H5v18h8v-2"/>
+  </svg>
+  Logout
+</button>
+        </div>
+       
+      </div>
+    </header>
+    
+
+    <!-- Overview -->
+   <section class="overview">
+
+  <!-- Top row -->
+  <div class="overview-header">
+    <div class="badge">Admin Dashboard </div>
+   <button class="refresh-btn">🔄 Refresh</button>
+  </div>
+
+  <!-- Title -->
+  <h2>Company Asset Overview</h2>
+
+  <!-- Cards -->
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon blue">📦</div>
+      <p>Total assets</p>
+      <h3>{{totalAssets}}</h3>
+    </div>
+
+    <div class="card">
+      <div class="icon green">✔️</div>
+      <p>Available</p>
+      <h3>{{available}}</h3>
+    </div>
+
+    <div class="card">
+      <div class="icon lightblue">👤</div>
+      <p>Assigned</p>
+      <h3>{{assigned}}</h3>
+    </div>
+
+    <div class="card">
+      <div class="icon yellow">⏳</div>
+      <p>Pending requests</p>
+      <h3>{{pending}}</h3>
+    </div>
+
+    <div class="card">
+      <div class="icon gray">👥</div>
+      <p>Total users</p>
+      <h3>{{users}}</h3>
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- Admin Actions -->
+    <section class="actions">
+      <h2>Admin actions</h2>
+      <p>Approve requests, assign assets, and keep the asset register current.</p>
+
+      <div class="action-grid">
+
+        <div class="action-box">
+          <span class="action-icon blue">➕</span>
+          <span>Add Asset</span>
+        </div>
+
+        <div class="action-box">
+          <span class="action-icon blue">📥</span>
+          <span>Review Requests</span>
+        </div>
+
+        <div class="action-box">
+          <span class="action-icon blue">🔗</span>
+          <span>Assign Asset</span>
+        </div>
+
+        <div class="action-box">
+          <span class="action-icon blue">🕓</span>
+          <span>Asset History</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>

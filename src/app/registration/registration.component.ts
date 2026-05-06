@@ -17,7 +17,9 @@ export class RegistrationComponent {
     last: '',
     email: '',
     password: '',
-    phno: ''
+    phno: '',
+    role:''
+
   }
 
   constructor(private f: FormBuilder, private b: RegiServService) { }
@@ -27,7 +29,8 @@ export class RegistrationComponent {
     last: ['', [Validators.required]],
     email: ['', [Validators.required]],
     password: ['', [Validators.required]],
-    phno: ['', [Validators.required]]
+    phno: ['', [Validators.required]],
+    role: ['',[Validators.required]]
   });
 
 
