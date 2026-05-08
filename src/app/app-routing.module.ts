@@ -4,7 +4,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { UserDashboradComponent } from './users/user-dashborad/user-dashborad.component';
 import { MyAssetComponent } from './users/my-asset/my-asset.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+
 
 
 
@@ -14,6 +14,7 @@ import { MyRequestsComponent } from './users/my-requests/my-requests.component';
 import { RequestAssetComponent } from './users/request-asset/request-asset.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { AddAssetComponent } from './add-asset/add-asset.component';
+import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 
 const routes: Routes = [
   {path:'register',component:RegistrationComponent},
@@ -31,11 +32,30 @@ const routes: Routes = [
       { path: '', redirectTo: 'MyAsset', pathMatch: 'full' }
     ]
   },
-  {path:'admindashboard',component:DashBoardComponent,
-    children:[
-      {path:'add-Asset',component:AddAssetComponent}
-    ]
-  }
+  {
+  path: 'adminlayout',
+  component: AdminLayoutComponent,
+
+  children: [
+
+    {
+      path: '',
+      redirectTo: 'admindashboard',
+      pathMatch: 'full'
+    },
+
+    {
+      path: 'admindashboard',
+      component: DashBoardComponent
+    },
+
+    {
+      path: 'addAsset',
+      component: AddAssetComponent
+    }
+
+  ]
+}
 
 
 ];
