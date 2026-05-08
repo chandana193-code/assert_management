@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { LoginComponent } from './login/login.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+
 import { RegistrationComponent } from './registration/registration.component';
 
 import { UserDashboradComponent } from './users/user-dashborad/user-dashborad.component';
@@ -21,22 +21,14 @@ import { AddAssetComponent } from './add-asset/add-asset.component';
 import { MyRequestsComponent } from './users/my-requests/my-requests.component';
 import { RequestAssetComponent } from './users/request-asset/request-asset.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-// Angular Material
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { MatButtonModule } from '@angular/material/button';
-import { MatTableModule } from '@angular/material/table';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    AdminDashboardComponent, 
+    LoginComponent, 
     MyAssetComponent,
     UserDashboradComponent,
     RegistrationComponent,
@@ -47,13 +39,13 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     AddAssetComponent,
     MyRequestsComponent,
     RequestAssetComponent,
-    AdminDashboardComponent,
     RegistrationComponent,
     UserDashboradComponent,
     MyAssetComponent,
      AppComponent,
      DashBoardComponent,
-     SideBarComponent
+     SideBarComponent,
+     AdminLayoutComponent
   ],
 
   imports: [
@@ -63,13 +55,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatTableModule,
-    MatSnackBarModule
+    BrowserAnimationsModule
   ],
 
   providers: [],
