@@ -15,14 +15,19 @@ import { RequestAssetComponent } from './users/request-asset/request-asset.compo
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { AddAssetComponent } from './add-asset/add-asset.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
+import { authGuard } from './guards/auth.guard';
+import { roleGuard } from './guards/role.guard';
 
 const routes: Routes = [
   {path:'register',component:RegistrationComponent},
-  {path: '', component: LoginComponent},
+  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path: 'login', component: LoginComponent},
   
   {
     path: 'UserLayout',
     component: UserLayoutComponent,
+    canActivate: [authGuard, roleGuard],
+    data : { role : 'user'},
     children: [
       { path: 'MyAsset', component: MyAssetComponent },
       { path: 'dashboard', component: UserDashboradComponent },
@@ -35,6 +40,8 @@ const routes: Routes = [
   {
   path: 'adminlayout',
   component: AdminLayoutComponent,
+  canActivate: [authGuard, roleGuard],
+  data : { role : 'admin'},
 
   children: [
 
