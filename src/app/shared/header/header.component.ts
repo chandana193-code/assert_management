@@ -23,6 +23,7 @@ export class HeaderComponent {
 
   logout() {
     this.showDropdown = false;
-    this.router.navigate(['']);
+     localStorage.clear();
+    this.router.navigate(['/login']);
   }
 }
