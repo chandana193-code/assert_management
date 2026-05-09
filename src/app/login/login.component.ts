@@ -19,37 +19,50 @@ export class LoginComponent implements OnInit {
   ) { }
 
   loginForm = this.fb.group({
-    email: ['', Validators.required],
+    email: ['', [Validators.required]],
     password: ['', [Validators.required]]
   });
 
   onSubmit() {
-    console.log(this.loginForm.value);
+
+    if (this.loginForm.invalid) {
+      this.loginForm.markAllAsTouched();
+      return;
+    }
+
     const enteredEmail = this.loginForm.value.email;
     const enteredPassword = this.loginForm.value.password;
+
     const user = this.loginData.find(
       (u) => u.email === enteredEmail && u.password === enteredPassword
     );
+
     if (user) {
+      //  store session
+      localStorage.setItem('token', 'loggedIn');
+      localStorage.setItem('role', user.role);
+
       this.showSuccess = true;
+
       setTimeout(() => {
         this.showSuccess = false;
-        this.router.navigate(['/UserLayout']);
-      }, 1500);
 
+        //  role-based navigation
+        if (user.role === 'admin') {
+          this.router.navigate(['/adminlayout']);
+        } else {
+          this.router.navigate(['/UserLayout']);
+        }
+      }, 1500);
 
     } else {
       this.showError = true;
-
-      setTimeout(() => {
-        this.showError = false;
-      }, 1500);
-      // alert('Invalid Email or Password ❌');
+      setTimeout(() => this.showError = false, 1500);
     }
 
     this.loginForm.reset();
-    //this.router.navigate(['/user-dashboard']);
   }
+
   loginData: User[] = [];
 
   ngOnInit(): void {

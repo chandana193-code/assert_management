@@ -5,13 +5,10 @@
   <h2 class="logo">📦 User Panel</h2>
 
   <ul class="menu">
-    <li class="active" [routerLink]="['/UserLayout/MyAsset']">🏠Dashboard</li>
-    <li [routerLink]="['/UserLayout/RequestAsset']">💻 Asset Request</li>
-    <li [routerLink]="['/UserLayout/MyRequests']">➕ My Request</li>
-    <!-- <li>👥 Use</li>
-    <li>📨 Requests</li>
-    <li>🔗 Assign Asset</li>
-    <li>🕓 History</li> -->
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/UserLayout/MyAsset']">🏠Dashboard</li>
+    <li routerLinkActive="active" [routerLink]="['/UserLayout/RequestAsset']">💻 Asset Request</li>
+    <li routerLinkActive="active" [routerLink]="['/UserLayout/MyRequests']">➕ My Request</li>
+  
   </ul>
 </aside>
 </div>

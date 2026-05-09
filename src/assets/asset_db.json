@@ -22,15 +22,8 @@
       "email": "eakilesh0@gmail.com",
       "password": "Akilesh@007",
       "phno": 8656756872,
-      "id": "SB1qNR1L75Q"
-    },
-    {
-      "first": "",
-      "last": "",
-      "email": "",
-      "password": "",
-      "phno": "",
-      "id": "yiSLiezr-hQ"
+      "id": "SB1qNR1L75Q",
+      "role" : "admin"
     },
     {
       "first": "dhina",
@@ -46,7 +39,8 @@
       "email": "hari@gmail.com",
       "password": "hari123",
       "phno": 739878973,
-      "id": "mD39xxteDHA"
+      "id": "mD39xxteDHA",
+      "role" : "user"
     },
     {
       "first": "sai",
@@ -75,13 +69,13 @@
       "id": "H76_thN"
     },
     {
-      "first": "ertyj",
-      "last": "karthik",
-      "email": "mamidi@gmail",
-      "password": "wertyh",
-      "phno": "08498991550",
-      "role": "aserthasdfer",
-      "id": "32fMBur"
+      "first": "admin",
+      "last": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "phno": 9876543210,
+      "id": "admin123",
+      "role" : "admin"
     }
   ],
   "asset": [],
